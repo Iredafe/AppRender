@@ -553,25 +553,33 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jTableForSelectTopic.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jTableForSelectTopic.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Topic", "Description"
+                "Topic", "Description", "Location"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTableForSelectTopic.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jTableForSelectTopic.setGridColor(new java.awt.Color(0, 204, 204));
         jTableForSelectTopic.setIntercellSpacing(new java.awt.Dimension(3, 3));
@@ -585,16 +593,12 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
             }
         });
         jScrollPane11.setViewportView(jTableForSelectTopic);
-        if (jTableForSelectTopic.getColumnModel().getColumnCount() > 0) {
-            jTableForSelectTopic.getColumnModel().getColumn(0).setHeaderValue("");
-            jTableForSelectTopic.getColumnModel().getColumn(1).setHeaderValue("Description");
-        }
 
-        selectSubjectPanel.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 400, 230));
+        selectSubjectPanel.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 510, 230));
 
         jLabel32.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel32.setText("Select  ");
-        selectSubjectPanel.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, -1, -1));
+        jLabel32.setText("Choose");
+        selectSubjectPanel.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
         jTabbedPaneForSubjectsPanel.addTab("tab1", selectSubjectPanel);
 
@@ -1994,22 +1998,23 @@ jTabbedPaneForSubjectsPanel.setSelectedIndex(1);        // TODO add your handlin
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-jTabbedPaneForSubjectsPanel.setSelectedIndex(1);  
-
+//jTabbedPaneForSubjectsPanel.setSelectedIndex(1);  
+ReadBook myBook = new ReadBook();
+myBook.openDocument(jTableForSelectTopic);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jTableForSelectTopicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableForSelectTopicMouseClicked
-        //call method from LectureNotes class to Display selected Rows in Jtextfields when clicked
+        //call method from StudentNotes class to Display selected Rows in Jtextfields when clicked
 StudentNotes myNotes = new StudentNotes();
 myNotes.displayWhenClicked(jTextAreaForTopicDescription, jTableForSelectTopic);
+
 
     }//GEN-LAST:event_jTableForSelectTopicMouseClicked
 
     private void jComboBoxForSelectSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxForSelectSubjectActionPerformed
 StudentNotes myNotes = new StudentNotes();
 myNotes.addTopicsToTable(jTableForSelectTopic, jComboBoxForSelectSubject, jTextAreaForTopicDescription);
-
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxForSelectSubjectActionPerformed

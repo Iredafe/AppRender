@@ -25,11 +25,8 @@ public class StudentNotes {
 PreparedStatement pst;
 ResultSet rs;
 
-
-
 public void addSubjectsToComboBox(JComboBox jComboBoxForSelectSubject){
- 
-    
+   
     //assign fields to variables
                 String queryForSubjectComboBox = "SELECT `subject name` FROM `topic` ";
                         
@@ -39,8 +36,7 @@ public void addSubjectsToComboBox(JComboBox jComboBoxForSelectSubject){
                         
                 while (rs.next()) {
 String subjectComboBox = rs.getString("subject name");
-    
-                    
+                      
 
 //add subject to combobox if not already in combobox
                 DefaultComboBoxModel combo = (DefaultComboBoxModel) jComboBoxForSelectSubject.getModel();
@@ -72,7 +68,7 @@ String subjectComboBox = rs.getString("subject name");
         myTable.setRowCount(0);
         
 //fetch products from database
-        String queryForAddTopicToTable = "SELECT `topic name`,`topic description` FROM topic "
+        String queryForAddTopicToTable = "SELECT `topic name`,`topic description`, `topic notes` FROM topic "
                 + "WHERE `subject name` = " + "'" + subjectName + "'";
         
         try {
@@ -82,9 +78,10 @@ String subjectComboBox = rs.getString("subject name");
                 
                 String topicName = rs.getString("topic name");
     String topicDescription = rs.getString("topic description");
+    String topicNoteLocation = rs.getString("topic notes");
 //add selected products to table
                 myTable.addRow(new Object[] {
-                   topicName, topicDescription }); 
+                   topicName, topicDescription, topicNoteLocation }); 
             }
         }
         catch(Exception ex) {
