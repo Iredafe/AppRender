@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 14, 2020 at 11:56 PM
+-- Generation Time: May 27, 2020 at 11:06 PM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -84,17 +84,22 @@ CREATE TABLE IF NOT EXISTS `students assessment` (
 CREATE TABLE IF NOT EXISTS `students assignment` (
   `assignment id` int(50) NOT NULL AUTO_INCREMENT,
   `subject name` varchar(50) NOT NULL,
-  `assignment question` varchar(50) DEFAULT NULL,
-  `assignment answers` varchar(50) DEFAULT NULL,
+  `topic` text NOT NULL,
+  `exercise` text NOT NULL,
+  `assignment question` varchar(50) NOT NULL,
+  `assignment answers` varchar(50) NOT NULL,
   `student name` varchar(50) NOT NULL,
   PRIMARY KEY (`assignment id`),
   KEY `student name` (`student name`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `students assignment`
 --
 
+INSERT INTO `students assignment` (`assignment id`, `subject name`, `topic`, `exercise`, `assignment question`, `assignment answers`, `student name`) VALUES
+(1, 'Computer Science', '', '', '', '', 'Sam'),
+(2, 'English Language', '', '', '', '', 'Sam');
 
 -- --------------------------------------------------------
 
@@ -170,30 +175,14 @@ CREATE TABLE IF NOT EXISTS `topic` (
   `subject name` varchar(50) NOT NULL,
   PRIMARY KEY (`topic id`),
   KEY `subject name` (`subject name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `topic`
 --
 
 INSERT INTO `topic` (`topic id`, `topic name`, `topic description`, `topic notes`, `subject name`) VALUES
-(1, 'The Name of Jesus', 'to explain the power in the name of Jesus', 'C:UsersIredafeDocumentsDIGITAL REVOLUTION.pptx', 'CRS'),
-(2, 'Pronoun', 'to explain the usage of pronouns in sentence const', 'C:UsersIredafeDocumentsCREATE A TABLE WITH FOREIGN', 'English'),
-(3, 'Respiration', 'to explain the fundamentals of the human respirato', 'C:UsersIredafeDocumentsCREATE A TABLE WITH FOREIGN', 'Biology'),
-(4, 'Algebraic Equations', 'to help students learn the secrets of maths', 'C:UsersIredafeDesktopdafe backupDocumentsDocuments', 'Maths'),
-(5, 'Crucifixion', 'to help students understand thedeath and burial of', 'C:UsersIredafeDesktopdafe backupDocumentsDocuments', 'CRS'),
-(10, 'Painting Principles', 'how to paint well', 'C:UsersIredafeDocumentsDIGITAL REVOLUTION.pptx', 'Arts'),
-(6, 'Love', 'The importance of showing love is explained', 'C:\\Users\\Iredafe\\Documents\\CREATE A TABLE WITH FOREIGN KEY.txt', 'CRS'),
-(7, 'Preposition', 'help students understand the usage of common prepositions', 'C:\\Users\\Iredafe\\Documents\\CREATE A TABLE WITH FOREIGN KEY.txt', 'English'),
-(8, 'Synonyms', 'help students appreciate the use of words with similar meaning', 'C:\\Users\\Iredafe\\Documents\\CREATE A TABLE WITH FOREIGN KEY.txt', 'English'),
-(9, 'Colors', 'how to blend colours well', 'C:UsersIredafeDocumentsDIGITAL REVOLUTION.pptx', 'Arts'),
-(11, 'Excretion', 'to explain the fundamentals of the human excretory system', 'C:UsersIredafeDocumentsCREATE A TABLE WITH FOREIGN', 'Biology'),
-(12, 'Digestion', 'to explain the fundamentals of the human digestive system', 'C:UsersIredafeDocumentsCREATE A TABLE WITH FOREIGN', 'Biology'),
-(13, 'Reproduction', 'to explain the fundamentals of the human reproductive system', 'C:UsersIredafeDocumentsCREATE A TABLE WITH FOREIGN', 'Biology'),
-(14, 'Quadratic Equations', 'to help students learn the secrets of quadrants', 'C:UsersIredafeDesktopdafe backupDocumentsDocuments', 'Maths'),
-(15, 'Simultaneous Equations', 'to help students learn the secrets of solving 2 or 3 equations simultaneously', 'C:UsersIredafeDesktopdafe backupDocumentsDocuments', 'Maths'),
-(16, 'Verbal Nouns', 'this helps you learn the usage of verbs', 'C:UsersIredafeDocumentsCREATE A TABLE WITH FOREIGN KEY.txt', 'English'),
-(17, 'Almighty Forrmula', 'the most powerful equation', 'C:\\Users\\Iredafe\\Documents\\DIGITAL REVOLUTION.pptx', 'Maths');
+(1, 'Python', 'the wonderful possibilities of Python programming.', 'C:\\Users\\Iredafe\\Desktop\\Programming books\\Head First Python ( PDFDrive.com ).pdf', 'Computer Science');
 
 -- --------------------------------------------------------
 

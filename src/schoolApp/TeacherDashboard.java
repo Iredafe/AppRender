@@ -61,6 +61,7 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
         gradesBtn = new javax.swing.JButton();
         scheduleBtn = new javax.swing.JButton();
         lectureBtn1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         subTopDashboard = new javax.swing.JPanel();
         settingsInSubTopPanel = new javax.swing.JLabel();
         labelForSubTopPanel = new javax.swing.JLabel();
@@ -145,8 +146,38 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
         jLabel17 = new javax.swing.JLabel();
         schedulePanel = new javax.swing.JPanel();
         assessmentPanel = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jTextFieldForEnterSubjectName1 = new javax.swing.JTextField();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTableForLectureNotes1 = new javax.swing.JTable();
+        jTextFieldForTopicNumber1 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldForEnterTopic1 = new javax.swing.JTextField();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextAreaForTopicDescription1 = new javax.swing.JTextArea();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jTextFieldForUploadNotes1 = new javax.swing.JTextField();
+        jButtonForAttach1 = new javax.swing.JButton();
+        jButtonForInsert1 = new javax.swing.JButton();
+        jLabel44 = new javax.swing.JLabel();
         examsPanel = new javax.swing.JPanel();
         gradesPanel = new javax.swing.JPanel();
+        Assignments = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jTextFieldForEnterSubjectName2 = new javax.swing.JTextField();
+        jTextFieldForTopicNumber2 = new javax.swing.JTextField();
+        jTextFieldForEnterTopic2 = new javax.swing.JTextField();
+        jTextFieldForUploadNotes2 = new javax.swing.JTextField();
+        jButtonForAttach2 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTableForLectureNotes2 = new javax.swing.JTable();
+        jButtonForInsert2 = new javax.swing.JButton();
+        jLabel47 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -285,7 +316,7 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 assessmentBtnActionPerformed(evt);
             }
         });
-        leftDashboard.add(assessmentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 110, 70));
+        leftDashboard.add(assessmentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 110, 70));
 
         examsBtn.setBackground(new java.awt.Color(153, 255, 153));
         examsBtn.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -298,7 +329,7 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 examsBtnActionPerformed(evt);
             }
         });
-        leftDashboard.add(examsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 110, 70));
+        leftDashboard.add(examsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 110, 70));
 
         gradesBtn.setBackground(new java.awt.Color(153, 255, 153));
         gradesBtn.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -311,7 +342,7 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 gradesBtnActionPerformed(evt);
             }
         });
-        leftDashboard.add(gradesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 110, 70));
+        leftDashboard.add(gradesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 110, 70));
 
         scheduleBtn.setBackground(new java.awt.Color(153, 255, 153));
         scheduleBtn.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -324,7 +355,7 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 scheduleBtnActionPerformed(evt);
             }
         });
-        leftDashboard.add(scheduleBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 110, 70));
+        leftDashboard.add(scheduleBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 110, 70));
 
         lectureBtn1.setBackground(new java.awt.Color(153, 255, 153));
         lectureBtn1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -337,7 +368,22 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 lectureBtn1ActionPerformed(evt);
             }
         });
-        leftDashboard.add(lectureBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 110, 70));
+        leftDashboard.add(lectureBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 110, 70));
+
+        jButton3.setBackground(new java.awt.Color(153, 255, 153));
+        jButton3.setFont(new java.awt.Font("Georgia", 1, 11)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/schoolApp/schoolicons/assignment icon.png"))); // NOI18N
+        jButton3.setText("Assignments");
+        jButton3.setToolTipText("Assignments");
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setPreferredSize(new java.awt.Dimension(104, 62));
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        leftDashboard.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 110, 70));
 
         MainDashboardPanel.add(leftDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 540));
 
@@ -347,15 +393,13 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
 
         labelForSubTopPanel.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         labelForSubTopPanel.setForeground(new java.awt.Color(255, 255, 255));
-        subTopDashboard.add(labelForSubTopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 6, 120, 30));
-
-        jLabelForPanels.setFont(new java.awt.Font("Garamond", 3, 16)); // NOI18N
-        subTopDashboard.add(jLabelForPanels, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 130, 20));
+        subTopDashboard.add(labelForSubTopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 6, 160, 30));
+        subTopDashboard.add(jLabelForPanels, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 120, 30));
 
         MainDashboardPanel.add(subTopDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 1010, 50));
 
-        jTabbedPaneForTeacherDashboard.setMinimumSize(new java.awt.Dimension(1010, 590));
-        jTabbedPaneForTeacherDashboard.setPreferredSize(new java.awt.Dimension(1010, 590));
+        jTabbedPaneForTeacherDashboard.setMinimumSize(new java.awt.Dimension(1010, 570));
+        jTabbedPaneForTeacherDashboard.setPreferredSize(new java.awt.Dimension(1010, 570));
 
         lecturePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1087,19 +1131,296 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
 
         jTabbedPaneForTeacherDashboard.addTab("tab1", lecturePanel);
 
+        schedulePanel.setBackground(new java.awt.Color(153, 255, 153));
         schedulePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPaneForTeacherDashboard.addTab("tab2", schedulePanel);
 
+        assessmentPanel.setBackground(new java.awt.Color(153, 255, 153));
         assessmentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel42.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel42.setText("Class Assessments");
+        assessmentPanel.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, 20));
+
+        jTextFieldForEnterSubjectName1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextFieldForEnterSubjectName1.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jTextFieldForEnterSubjectName1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldForEnterSubjectName1ActionPerformed(evt);
+            }
+        });
+        assessmentPanel.add(jTextFieldForEnterSubjectName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, 30));
+
+        jScrollPane14.setBackground(new java.awt.Color(0, 204, 153));
+        jScrollPane14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 204, 153), new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 153), new java.awt.Color(0, 204, 102)));
+        jScrollPane14.setViewportBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 102)));
+        jScrollPane14.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+
+        jTableForLectureNotes1.setBackground(new java.awt.Color(204, 255, 204));
+        jTableForLectureNotes1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTableForLectureNotes1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jTableForLectureNotes1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Topic No", "Subject Name", "Topic", "Description", "Notes"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableForLectureNotes1.setGridColor(new java.awt.Color(153, 153, 153));
+        jTableForLectureNotes1.setShowVerticalLines(true);
+        jTableForLectureNotes1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableForLectureNotes1MouseClicked(evt);
+            }
+        });
+        jScrollPane14.setViewportView(jTableForLectureNotes1);
+
+        assessmentPanel.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 70, 510, 230));
+
+        jTextFieldForTopicNumber1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextFieldForTopicNumber1.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jTextFieldForTopicNumber1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldForTopicNumber1ActionPerformed(evt);
+            }
+        });
+        assessmentPanel.add(jTextFieldForTopicNumber1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 200, 30));
+
+        jLabel43.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel43.setText("Enter Topic No.");
+        assessmentPanel.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, 20));
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel8.setText("Enter Topic");
+        assessmentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 90, 10));
+
+        jTextFieldForEnterTopic1.setBackground(new java.awt.Color(204, 255, 204));
+        assessmentPanel.add(jTextFieldForEnterTopic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 250, 30));
+
+        jTextAreaForTopicDescription1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextAreaForTopicDescription1.setColumns(20);
+        jTextAreaForTopicDescription1.setRows(5);
+        jScrollPane9.setViewportView(jTextAreaForTopicDescription1);
+
+        assessmentPanel.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 250, -1));
+
+        jLabel9.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel9.setText("Description");
+        assessmentPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 90, -1));
+
+        jLabel10.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel10.setText("Upload Notes");
+        assessmentPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 100, 20));
+
+        jTextFieldForUploadNotes1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextFieldForUploadNotes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldForUploadNotes1ActionPerformed(evt);
+            }
+        });
+        assessmentPanel.add(jTextFieldForUploadNotes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 250, 30));
+
+        jButtonForAttach1.setBackground(new java.awt.Color(0, 255, 153));
+        jButtonForAttach1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButtonForAttach1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/schoolApp/schoolicons/attach icon.png"))); // NOI18N
+        jButtonForAttach1.setText("Attach");
+        jButtonForAttach1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonForAttach1ActionPerformed(evt);
+            }
+        });
+        assessmentPanel.add(jButtonForAttach1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 100, 30));
+
+        jButtonForInsert1.setBackground(new java.awt.Color(0, 255, 153));
+        jButtonForInsert1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButtonForInsert1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/schoolApp/schoolicons/add.png"))); // NOI18N
+        jButtonForInsert1.setText("Insert");
+        jButtonForInsert1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonForInsert1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonForInsert1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonForInsert1ActionPerformed(evt);
+            }
+        });
+        assessmentPanel.add(jButtonForInsert1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 70, 60));
+
+        jLabel44.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel44.setText("Enter Subject Name");
+        assessmentPanel.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, 20));
+
         jTabbedPaneForTeacherDashboard.addTab("tab3", assessmentPanel);
 
+        examsPanel.setBackground(new java.awt.Color(153, 255, 153));
         examsPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPaneForTeacherDashboard.addTab("tab4", examsPanel);
 
+        gradesPanel.setBackground(new java.awt.Color(153, 255, 153));
         gradesPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPaneForTeacherDashboard.addTab("tab5", gradesPanel);
 
-        MainDashboardPanel.add(jTabbedPaneForTeacherDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 1010, 560));
+        Assignments.setBackground(new java.awt.Color(153, 255, 153));
+        Assignments.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel45.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel45.setText("Enter Topic ");
+        Assignments.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 20));
+
+        jLabel46.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel46.setText("Assignments");
+        Assignments.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 90, 20));
+
+        jTextFieldForEnterSubjectName2.setBackground(new java.awt.Color(204, 255, 204));
+        jTextFieldForEnterSubjectName2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jTextFieldForEnterSubjectName2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldForEnterSubjectName2ActionPerformed(evt);
+            }
+        });
+        Assignments.add(jTextFieldForEnterSubjectName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, 30));
+
+        jTextFieldForTopicNumber2.setBackground(new java.awt.Color(204, 255, 204));
+        jTextFieldForTopicNumber2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jTextFieldForTopicNumber2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldForTopicNumber2ActionPerformed(evt);
+            }
+        });
+        Assignments.add(jTextFieldForTopicNumber2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 200, 30));
+
+        jTextFieldForEnterTopic2.setBackground(new java.awt.Color(204, 255, 204));
+        Assignments.add(jTextFieldForEnterTopic2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 200, 30));
+
+        jTextFieldForUploadNotes2.setBackground(new java.awt.Color(204, 255, 204));
+        jTextFieldForUploadNotes2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldForUploadNotes2ActionPerformed(evt);
+            }
+        });
+        Assignments.add(jTextFieldForUploadNotes2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 270, 30));
+
+        jButtonForAttach2.setBackground(new java.awt.Color(0, 255, 153));
+        jButtonForAttach2.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButtonForAttach2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/schoolApp/schoolicons/attach icon.png"))); // NOI18N
+        jButtonForAttach2.setText("Attach");
+        jButtonForAttach2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonForAttach2ActionPerformed(evt);
+            }
+        });
+        Assignments.add(jButtonForAttach2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 100, 30));
+
+        jLabel11.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel11.setText("Upload Questions");
+        Assignments.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 120, 20));
+
+        jLabel24.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel24.setText("Exercise Name");
+        Assignments.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 130, 10));
+
+        jScrollPane15.setBackground(new java.awt.Color(0, 204, 153));
+        jScrollPane15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 204, 153), new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 153), new java.awt.Color(0, 204, 102)));
+        jScrollPane15.setViewportBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 102), new java.awt.Color(0, 204, 102)));
+        jScrollPane15.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+
+        jTableForLectureNotes2.setBackground(new java.awt.Color(204, 255, 204));
+        jTableForLectureNotes2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTableForLectureNotes2.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jTableForLectureNotes2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Topic No", "Subject Name", "Topic", "Description", "Notes"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableForLectureNotes2.setGridColor(new java.awt.Color(153, 153, 153));
+        jTableForLectureNotes2.setShowVerticalLines(true);
+        jTableForLectureNotes2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableForLectureNotes2MouseClicked(evt);
+            }
+        });
+        jScrollPane15.setViewportView(jTableForLectureNotes2);
+
+        Assignments.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 70, 510, 230));
+
+        jButtonForInsert2.setBackground(new java.awt.Color(0, 255, 153));
+        jButtonForInsert2.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButtonForInsert2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/schoolApp/schoolicons/add.png"))); // NOI18N
+        jButtonForInsert2.setText("Insert");
+        jButtonForInsert2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonForInsert2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonForInsert2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonForInsert2ActionPerformed(evt);
+            }
+        });
+        Assignments.add(jButtonForInsert2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 70, 60));
+
+        jLabel47.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jLabel47.setText("Enter Subject Name");
+        Assignments.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, 20));
+
+        jTabbedPaneForTeacherDashboard.addTab("tab6", Assignments);
+
+        MainDashboardPanel.add(jTabbedPaneForTeacherDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 1010, 540));
 
         jTabbedPaneForHomeAndDashboard.addTab("tab2", MainDashboardPanel);
 
@@ -1122,7 +1443,6 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
         jTabbedPaneForHomeAndDashboard.setSelectedIndex(1);
         jTabbedPaneForTeacherDashboard.setSelectedIndex(0);
         labelForSubTopPanel.setText("My Lectures");
-jLabelForPanels.setText("Lecture Notes");
         // TODO add your handling code here:
     }//GEN-LAST:event_myLectureHomeActionPerformed
 
@@ -1199,7 +1519,7 @@ jLabelForPanels.setText("Lecture Notes");
     private void lectureBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lectureBtn1ActionPerformed
 jTabbedPaneForTeacherDashboard.setSelectedIndex(0);
 jTabbedPaneForLectureBtn.setSelectedIndex(0);
-jLabelForPanels.setText("Lecture Notes");
+labelForSubTopPanel.setText("Lecture Notes");
 
 // TODO add your handling code here:
     }//GEN-LAST:event_lectureBtn1ActionPerformed
@@ -1224,7 +1544,7 @@ jLabelForPanels.setText("Lecture Notes");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
-//panel foe add lecture notes
+//panel for add lecture notes
         jTabbedPaneForLectureBtn.setSelectedIndex(0);
 jLabelForPanels.setText("Lecture Notes");
 
@@ -1538,6 +1858,63 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonForClear2ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jTabbedPaneForTeacherDashboard.setSelectedIndex(5);
+        labelForSubTopPanel.setText("Student Assignments");
+
+        //this button calls the panel for assignments
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextFieldForEnterSubjectName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldForEnterSubjectName1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldForEnterSubjectName1ActionPerformed
+
+    private void jTableForLectureNotes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableForLectureNotes1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableForLectureNotes1MouseClicked
+
+    private void jTextFieldForTopicNumber1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldForTopicNumber1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldForTopicNumber1ActionPerformed
+
+    private void jTextFieldForUploadNotes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldForUploadNotes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldForUploadNotes1ActionPerformed
+
+    private void jButtonForAttach1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForAttach1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonForAttach1ActionPerformed
+
+    private void jButtonForInsert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForInsert1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonForInsert1ActionPerformed
+
+    private void jTextFieldForEnterSubjectName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldForEnterSubjectName2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldForEnterSubjectName2ActionPerformed
+
+    private void jTextFieldForTopicNumber2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldForTopicNumber2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldForTopicNumber2ActionPerformed
+
+    private void jTextFieldForUploadNotes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldForUploadNotes2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldForUploadNotes2ActionPerformed
+
+    private void jButtonForAttach2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForAttach2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonForAttach2ActionPerformed
+
+    private void jTableForLectureNotes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableForLectureNotes2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableForLectureNotes2MouseClicked
+
+    private void jButtonForInsert2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForInsert2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonForInsert2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1574,6 +1951,7 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Assignments;
     private javax.swing.JPanel MainDashboardPanel;
     private javax.swing.JPanel ViewPanel;
     private javax.swing.JPanel addSubjectPanel;
@@ -1591,10 +1969,13 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonForAddVideo;
     private javax.swing.JButton jButtonForAttach;
+    private javax.swing.JButton jButtonForAttach1;
+    private javax.swing.JButton jButtonForAttach2;
     private javax.swing.JButton jButtonForAttachFromVideo;
     private javax.swing.JButton jButtonForClear;
     private javax.swing.JButton jButtonForClear1;
@@ -1604,6 +1985,8 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     private javax.swing.JButton jButtonForEdit;
     private javax.swing.JButton jButtonForHome;
     private javax.swing.JButton jButtonForInsert;
+    private javax.swing.JButton jButtonForInsert1;
+    private javax.swing.JButton jButtonForInsert2;
     private javax.swing.JButton jButtonForLibrary;
     private javax.swing.JButton jButtonForLibraryFromVideo;
     private javax.swing.JButton jButtonForNotesFromVideo;
@@ -1614,6 +1997,8 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     private javax.swing.JButton jButtonForViewFromVideo;
     private javax.swing.JButton jButtonToHome;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1626,15 +2011,24 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelForPanels;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -1644,16 +2038,22 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPaneForHomeAndDashboard;
     private javax.swing.JTabbedPane jTabbedPaneForLectureBtn;
     private javax.swing.JTabbedPane jTabbedPaneForTeacherDashboard;
     private javax.swing.JTable jTableForLectureNotes;
+    private javax.swing.JTable jTableForLectureNotes1;
+    private javax.swing.JTable jTableForLectureNotes2;
     private javax.swing.JTable jTableForLectureVideos;
     private javax.swing.JTable jTableForLibrary;
     private javax.swing.JTextArea jTextAreaForBookDescription;
     private javax.swing.JTextArea jTextAreaForTopicDescription;
+    private javax.swing.JTextArea jTextAreaForTopicDescription1;
     private javax.swing.JTextArea jTextAreaForVideoDescription;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -1662,11 +2062,19 @@ myLectureVideos.deleteLectureVideos(jTextFieldForVideoId);
     private javax.swing.JTextField jTextFieldForBookName;
     private javax.swing.JTextField jTextFieldForBookSubject;
     private javax.swing.JTextField jTextFieldForEnterSubjectName;
+    private javax.swing.JTextField jTextFieldForEnterSubjectName1;
+    private javax.swing.JTextField jTextFieldForEnterSubjectName2;
     private javax.swing.JTextField jTextFieldForEnterTopic;
+    private javax.swing.JTextField jTextFieldForEnterTopic1;
+    private javax.swing.JTextField jTextFieldForEnterTopic2;
     private javax.swing.JTextField jTextFieldForSubjectName;
     private javax.swing.JTextField jTextFieldForTopicNumber;
+    private javax.swing.JTextField jTextFieldForTopicNumber1;
+    private javax.swing.JTextField jTextFieldForTopicNumber2;
     private javax.swing.JTextField jTextFieldForUploadBook;
     private javax.swing.JTextField jTextFieldForUploadNotes;
+    private javax.swing.JTextField jTextFieldForUploadNotes1;
+    private javax.swing.JTextField jTextFieldForUploadNotes2;
     private javax.swing.JTextField jTextFieldForVideoId;
     private javax.swing.JTextField jTextFieldForVideoName;
     private javax.swing.JTextField jTextFieldForVideoUpload;

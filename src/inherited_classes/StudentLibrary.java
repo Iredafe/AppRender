@@ -65,7 +65,7 @@ String libraryComboBox = rs.getString("subject name");
         myBookTable.setRowCount(0);
         
 //fetch products from database
-        String queryForAddBookToLibrary = "SELECT `book name`, `author name`, `book file` FROM library "
+        String queryForAddBookToLibrary = "SELECT `book name`, `author name`, `book file`, `book description` FROM library "
                 + "WHERE `subject name` = " + "'" + libraryComboName + "'";
         
         try {
@@ -76,10 +76,10 @@ String libraryComboBox = rs.getString("subject name");
                 String bookName = rs.getString("book name");
                 String authorName=rs.getString("author name");
                 String bookFileLocation= rs.getString("book file");
-    
+                String bookDescription = rs.getString("book description");
 //add selected products to table
                 myBookTable.addRow(new Object[] {
-                   bookName, authorName, bookFileLocation }); 
+                   bookName, authorName, bookDescription, bookFileLocation }); 
             }
         }
         catch(Exception ex) {

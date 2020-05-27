@@ -11,6 +11,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 import schoolApp.SqlConnection;
 
@@ -64,25 +65,41 @@ String videoComboBox = rs.getString("subject name");
         myVideo.setRowCount(0);
         
 //fetch products from database
-        String queryForStudentVideo = "SELECT `video name` FROM video "
-                + "WHERE `subject name` = '" + videoComboName + "'";
+        String queryForStudentVideo = "SELECT `video name`, `video file`, `video description` FROM video "
+                + "WHERE `subject name` = " + "'" + videoComboName + "'";
         
+//        String queryForAddTopicToTable = "SELECT `topic name`,`topic description`, `topic notes` FROM topic "
+//                + "WHERE `subject name` = " + "'" + subjectName + "'";
+
+
         try {
             pst = SqlConnection.getConnection().prepareStatement(queryForStudentVideo);
             rs = pst.executeQuery();
             while (rs.next()) {
                 
                 String videoName = rs.getString("video name");
-                
+                String VideoFileLocation = rs.getString("video file");
+                String videoDescriptionRow=rs.getString("video description");
 //add selected products to table
                 myVideo.addRow(new Object[] {
-                   videoName }); 
+                   videoName, videoDescriptionRow, VideoFileLocation}); 
             }
         }
         catch(Exception ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
     }
+// create method to populate the topic description field when a topic is selected
+public void  displayWhenClicked(JTextArea jTextAreaForVideoDescription, JTable jTableForStudentVideo){
+    
+    
+int videoDescriptionRow= jTableForStudentVideo.getSelectedRow();
+
+        DefaultTableModel model = (DefaultTableModel)jTableForStudentVideo.getModel();
+            jTextAreaForVideoDescription.setText(model.getValueAt(videoDescriptionRow, 1).toString());
+           
+
+}
 
 
     }

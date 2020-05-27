@@ -14,19 +14,19 @@ import javax.swing.JTable;
  *
  * @author Iredafe
  */
-public class ReadBook {
-    
-    
-    public void openNote(JTable jTableForSelectTopic){
-        int row = jTableForSelectTopic.getSelectedRow();
+public class OpenVideoFile {
 
-String value = (jTableForSelectTopic.getModel().getValueAt(row, 2).toString());
-    
 
+public void playVideo(JTable jTableForStudentVideo){
+    
+            int row = jTableForStudentVideo.getSelectedRow();
+
+String value = (jTableForStudentVideo.getModel().getValueAt(row, 1).toString());
+    
 if (Desktop.isDesktopSupported()){
 try{
-      File myFile = new File(value);
-    Desktop.getDesktop().open(myFile);    }
+//      File myFile = new File(value);
+    Desktop.getDesktop().open(new File (value));    }
 
 catch(Exception e){
         
@@ -57,10 +57,8 @@ catch(Exception e){
 
 }
 
-   
-}
 
     
-
+}
 
 
