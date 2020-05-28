@@ -11,6 +11,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 import schoolApp.SqlConnection;
 
@@ -86,6 +87,18 @@ String libraryComboBox = rs.getString("subject name");
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
     }
+    
+    public void  displayWhenClicked(JTextArea jTextAreaForLibraryBookDescription, JTable jTableForLibraryBook){
+    
+    
+int bookDescription = jTableForLibraryBook.getSelectedRow();
+
+        DefaultTableModel model = (DefaultTableModel)jTableForLibraryBook.getModel();
+            jTextAreaForLibraryBookDescription.setText(model.getValueAt(bookDescription, 2).toString());
+           
+
+}
+
 
     }
     

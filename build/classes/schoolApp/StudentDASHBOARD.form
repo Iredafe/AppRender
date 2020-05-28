@@ -502,7 +502,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="40" y="430" width="120" height="70"/>
+                      <AbsoluteConstraints x="40" y="420" width="120" height="70"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1129,7 +1129,7 @@
                                   </AuxValues>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="680" y="60" width="310" height="330"/>
+                                      <AbsoluteConstraints x="680" y="70" width="310" height="320"/>
                                     </Constraint>
                                   </Constraints>
 
@@ -1152,10 +1152,10 @@
                                           </Border>
                                         </Property>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                          <Table columnCount="3" rowCount="4">
-                                            <Column editable="true" title="Note Name" type="java.lang.Object"/>
-                                            <Column editable="true" title="Subject" type="java.lang.Object"/>
-                                            <Column editable="true" title="Location" type="java.lang.Object"/>
+                                          <Table columnCount="3" rowCount="20">
+                                            <Column editable="false" title="Note Name" type="java.lang.Object"/>
+                                            <Column editable="false" title="Subject" type="java.lang.Object"/>
+                                            <Column editable="false" title="Location" type="java.lang.Object"/>
                                           </Table>
                                         </Property>
                                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -1577,7 +1577,7 @@
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="560" y="50" width="-1" height="-1"/>
+                                  <AbsoluteConstraints x="870" y="60" width="-1" height="-1"/>
                                 </Constraint>
                               </Constraints>
                             </Component>
@@ -1593,10 +1593,13 @@
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.JTextArea" name="jTextArea3">
+                                <Component class="javax.swing.JTextArea" name="jTextAreaForLibraryBookDescription">
                                   <Properties>
                                     <Property name="editable" type="boolean" value="false"/>
                                     <Property name="columns" type="int" value="20"/>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Cambria" size="14" style="1"/>
+                                    </Property>
                                     <Property name="rows" type="int" value="5"/>
                                   </Properties>
                                 </Component>
@@ -1608,13 +1611,13 @@
                                   <Color blue="0" green="0" red="0" type="rgb"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="1"/>
+                                  <Font name="Georgia" size="18" style="0"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="e-LIBRARY"/>
+                                <Property name="text" type="java.lang.String" value="E-LIBRARY"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="320" y="0" width="110" height="30"/>
+                                  <AbsoluteConstraints x="370" y="10" width="110" height="30"/>
                                 </Constraint>
                               </Constraints>
                             </Component>
@@ -1838,7 +1841,7 @@
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="20" y="100" width="110" height="-1"/>
+                                  <AbsoluteConstraints x="30" y="100" width="110" height="-1"/>
                                 </Constraint>
                               </Constraints>
                             </Component>
@@ -1852,6 +1855,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Open"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="220" y="370" width="-1" height="-1"/>
@@ -1925,52 +1931,135 @@
                                 <Component class="javax.swing.JLabel" name="jLabel16">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="18" style="0"/>
+                                      <Font name="Georgia" size="18" style="2"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="My Time Table"/>
                                   </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="420" y="20" width="160" height="-1"/>
+                                      <AbsoluteConstraints x="430" y="20" width="160" height="-1"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
                                 <Component class="javax.swing.JButton" name="jButton58">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Back To Home"/>
+                                    <Property name="text" type="java.lang.String" value="Home"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton58ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="830" y="410" width="-1" height="-1"/>
+                                      <AbsoluteConstraints x="870" y="430" width="-1" height="-1"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
-                                <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                                <Container class="javax.swing.JScrollPane" name="jScrollPane15">
                                   <AuxValues>
                                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                   </AuxValues>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="150" y="60" width="630" height="350"/>
+                                      <AbsoluteConstraints x="40" y="60" width="900" height="360"/>
                                     </Constraint>
                                   </Constraints>
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTextArea" name="jTextArea5">
+                                    <Component class="javax.swing.JTable" name="jTableForStudentTimeTable">
                                       <Properties>
-                                        <Property name="columns" type="int" value="20"/>
-                                        <Property name="rows" type="int" value="5"/>
+                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                        </Property>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Georgia" size="14" style="0"/>
+                                        </Property>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
+                                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                          <Table columnCount="6" rowCount="21">
+                                            <Column editable="false" title="Time" type="java.lang.Object"/>
+                                            <Column editable="false" title="Monday" type="java.lang.Object"/>
+                                            <Column editable="false" title="Tuesday" type="java.lang.Object"/>
+                                            <Column editable="false" title="Wednesday" type="java.lang.Object"/>
+                                            <Column editable="false" title="Thursday" type="java.lang.Object"/>
+                                            <Column editable="false" title="Friday" type="java.lang.Object"/>
+                                          </Table>
+                                        </Property>
+                                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                          <TableColumnModel selectionModel="0">
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                              <Title/>
+                                              <Editor/>
+                                              <Renderer/>
+                                            </Column>
+                                          </TableColumnModel>
+                                        </Property>
+                                        <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="99" red="ff" type="rgb"/>
+                                        </Property>
+                                        <Property name="rowHeight" type="int" value="80"/>
+                                        <Property name="rowMargin" type="int" value="25"/>
+                                        <Property name="showHorizontalLines" type="boolean" value="true"/>
+                                        <Property name="showVerticalLines" type="boolean" value="true"/>
+                                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                        </Property>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
+                                <Component class="javax.swing.JButton" name="jButtonForViewTimeTable">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Georgia" size="12" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="View"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonForViewTimeTableActionPerformed"/>
+                                  </Events>
+                                  <Constraints>
+                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                      <AbsoluteConstraints x="420" y="440" width="-1" height="-1"/>
+                                    </Constraint>
+                                  </Constraints>
+                                </Component>
                               </SubComponents>
                             </Container>
                           </SubComponents>
@@ -2037,17 +2126,20 @@
                               <SubComponents>
                                 <Component class="javax.swing.JButton" name="jButton27">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Begin"/>
+                                    <Property name="text" type="java.lang.String" value="View"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton27ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="710" y="420" width="110" height="40"/>
+                                      <AbsoluteConstraints x="400" y="430" width="60" height="40"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2060,30 +2152,7 @@
                                   </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="510" y="40" width="40" height="-1"/>
-                                    </Constraint>
-                                  </Constraints>
-                                </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBoxForSelectAssignmentSubject">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="99" green="ff" red="ff" type="rgb"/>
-                                    </Property>
-                                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                      <StringArray count="1">
-                                        <StringItem index="0" value="Select"/>
-                                      </StringArray>
-                                    </Property>
-                                  </Properties>
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxForSelectAssignmentSubjectActionPerformed"/>
-                                  </Events>
-                                  <AuxValues>
-                                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                                  </AuxValues>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="170" y="40" width="120" height="40"/>
+                                      <AbsoluteConstraints x="60" y="40" width="40" height="-1"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2093,7 +2162,7 @@
                                   </AuxValues>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="510" y="60" width="450" height="340"/>
+                                      <AbsoluteConstraints x="60" y="60" width="820" height="350"/>
                                     </Constraint>
                                   </Constraints>
 
@@ -2120,95 +2189,25 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="javax.swing.JLabel" name="jLabel22">
-                                  <Properties>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="12" style="0"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="Select Topic:"/>
-                                  </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="40" y="110" width="-1" height="-1"/>
-                                    </Constraint>
-                                  </Constraints>
-                                </Component>
                                 <Component class="javax.swing.JButton" name="jButton59">
                                   <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Back To Home"/>
+                                    <Property name="text" type="java.lang.String" value="Home"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton59ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="100" y="420" width="-1" height="-1"/>
+                                      <AbsoluteConstraints x="890" y="430" width="-1" height="-1"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
-                                <Container class="javax.swing.JScrollPane" name="jScrollPane14">
-                                  <AuxValues>
-                                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                                  </AuxValues>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="150" y="100" width="260" height="290"/>
-                                    </Constraint>
-                                  </Constraints>
-
-                                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                                  <SubComponents>
-                                    <Component class="javax.swing.JTable" name="jTable2">
-                                      <Properties>
-                                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                          <Color blue="cc" green="ff" red="ff" type="rgb"/>
-                                        </Property>
-                                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                                            <BevelBorder>
-                                              <Color PropertyName="highlightOuter" blue="cc" green="ff" red="cc" type="rgb"/>
-                                              <Color PropertyName="highlightInner" blue="cc" green="ff" red="cc" type="rgb"/>
-                                              <Color PropertyName="shadowOuter" blue="cc" green="ff" red="cc" type="rgb"/>
-                                              <Color PropertyName="shadowInner" blue="cc" green="ff" red="cc" type="rgb"/>
-                                            </BevelBorder>
-                                          </Border>
-                                        </Property>
-                                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                          <Table columnCount="3" rowCount="4">
-                                            <Column editable="false" title="Topic" type="java.lang.Object"/>
-                                            <Column editable="false" title="Exercise" type="java.lang.Object"/>
-                                            <Column editable="false" title="Location" type="java.lang.Object"/>
-                                          </Table>
-                                        </Property>
-                                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                                          <TableColumnModel selectionModel="0">
-                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                              <Title/>
-                                              <Editor/>
-                                              <Renderer/>
-                                            </Column>
-                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                              <Title/>
-                                              <Editor/>
-                                              <Renderer/>
-                                            </Column>
-                                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                              <Title/>
-                                              <Editor/>
-                                              <Renderer/>
-                                            </Column>
-                                          </TableColumnModel>
-                                        </Property>
-                                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-                                        </Property>
-                                      </Properties>
-                                    </Component>
-                                  </SubComponents>
-                                </Container>
                               </SubComponents>
                             </Container>
                           </SubComponents>
@@ -2498,17 +2497,20 @@
                             </Component>
                             <Component class="javax.swing.JButton" name="jButton61">
                               <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Georgia" size="12" style="1"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Back To Home"/>
+                                <Property name="text" type="java.lang.String" value="Home"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton61ActionPerformed"/>
                               </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="160" y="430" width="-1" height="-1"/>
+                                  <AbsoluteConstraints x="700" y="410" width="-1" height="-1"/>
                                 </Constraint>
                               </Constraints>
                             </Component>
@@ -2524,7 +2526,7 @@
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.JTextArea" name="jTextArea6">
+                                <Component class="javax.swing.JTextArea" name="jTextAreaForStudentGrade">
                                   <Properties>
                                     <Property name="columns" type="int" value="20"/>
                                     <Property name="rows" type="int" value="5"/>
@@ -2532,6 +2534,25 @@
                                 </Component>
                               </SubComponents>
                             </Container>
+                            <Component class="javax.swing.JButton" name="jButton4">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="99" green="ff" red="ff" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Georgia" size="12" style="1"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="View"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                              </Events>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="310" y="410" width="-1" height="-1"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
                           </SubComponents>
                         </Container>
                       </SubComponents>
@@ -2605,13 +2626,13 @@
                                 <Component class="javax.swing.JLabel" name="jLabel23">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="12" style="3"/>
+                                      <Font name="Georgia" size="12" style="2"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Please Read and Adhere strictly to the following rules:"/>
                                   </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="40" y="70" width="-1" height="-1"/>
+                                      <AbsoluteConstraints x="50" y="80" width="-1" height="-1"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2623,14 +2644,14 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Exam Scores"/>
+                                    <Property name="text" type="java.lang.String" value="Scores"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton30ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="480" y="410" width="-1" height="30"/>
+                                      <AbsoluteConstraints x="720" y="320" width="90" height="30"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2642,33 +2663,14 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Start Objective"/>
+                                    <Property name="text" type="java.lang.String" value="Objective"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton31ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="210" y="410" width="-1" height="-1"/>
-                                    </Constraint>
-                                  </Constraints>
-                                </Component>
-                                <Component class="javax.swing.JButton" name="jButton32">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="cc" green="ff" red="0" type="rgb"/>
-                                    </Property>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="12" style="1"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="Practice Questions"/>
-                                  </Properties>
-                                  <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton32ActionPerformed"/>
-                                  </Events>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="600" y="410" width="-1" height="30"/>
+                                      <AbsoluteConstraints x="720" y="200" width="-1" height="30"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2680,14 +2682,14 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Start Theory"/>
+                                    <Property name="text" type="java.lang.String" value="Theory"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton33ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="350" y="410" width="-1" height="30"/>
+                                      <AbsoluteConstraints x="720" y="240" width="90" height="30"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2699,14 +2701,14 @@
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Georgia" size="12" style="1"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Back To Home"/>
+                                    <Property name="text" type="java.lang.String" value="Home"/>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton60ActionPerformed"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="90" y="410" width="-1" height="-1"/>
+                                      <AbsoluteConstraints x="720" y="360" width="90" height="30"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -2716,20 +2718,51 @@
                                   </AuxValues>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="40" y="110" width="890" height="280"/>
+                                      <AbsoluteConstraints x="40" y="110" width="640" height="280"/>
                                     </Constraint>
                                   </Constraints>
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTextArea" name="jTextArea7">
+                                    <Component class="javax.swing.JTextArea" name="jTextAreaForExamRules">
                                       <Properties>
+                                        <Property name="editable" type="boolean" value="false"/>
                                         <Property name="columns" type="int" value="20"/>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Georgia" size="14" style="3"/>
+                                        </Property>
                                         <Property name="rows" type="int" value="5"/>
+                                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                                            <EtchetBorder>
+                                              <Color PropertyName="highlight" blue="cc" green="ff" red="33" type="rgb"/>
+                                              <Color PropertyName="shadow" blue="cc" green="cc" red="0" type="rgb"/>
+                                            </EtchetBorder>
+                                          </Border>
+                                        </Property>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
+                                <Component class="javax.swing.JButton" name="jButton53">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="cc" green="ff" red="0" type="rgb"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Georgia" size="12" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="Practice"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton53ActionPerformed"/>
+                                  </Events>
+                                  <Constraints>
+                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                      <AbsoluteConstraints x="720" y="280" width="90" height="30"/>
+                                    </Constraint>
+                                  </Constraints>
+                                </Component>
                               </SubComponents>
                             </Container>
                           </SubComponents>
@@ -2762,6 +2795,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Start Theory"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton34ActionPerformed"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="380" y="400" width="-1" height="30"/>
@@ -2778,6 +2814,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Exam Rules"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton35ActionPerformed"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="240" y="400" width="-1" height="30"/>
@@ -2794,6 +2833,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Exam Scores"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton36ActionPerformed"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="530" y="400" width="-1" height="30"/>
@@ -2810,6 +2852,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Practice Questions"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton37ActionPerformed"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="670" y="400" width="-1" height="30"/>

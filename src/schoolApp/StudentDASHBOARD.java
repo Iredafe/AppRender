@@ -36,6 +36,10 @@ setLocationRelativeTo(null);
     
 StudentLibrary myBooks = new StudentLibrary();
 myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
+
+StudentExam myExam = new StudentExam();
+myExam.addExamRules(jTextAreaForExamRules);
+
     }
 
     /**
@@ -123,7 +127,7 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         eLibraryPanel = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        jTextAreaForLibraryBookDescription = new javax.swing.JTextArea();
         jLabel14 = new javax.swing.JLabel();
         jButton26 = new javax.swing.JButton();
         jButton63 = new javax.swing.JButton();
@@ -139,21 +143,18 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jPanel5 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jButton58 = new javax.swing.JButton();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTableForStudentTimeTable = new javax.swing.JTable();
+        jButtonForViewTimeTable = new javax.swing.JButton();
         assignmentPanel = new javax.swing.JPanel();
         jTabbedPaneForAssignments = new javax.swing.JTabbedPane();
         selectExcercisePanel = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jButton27 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
-        jComboBoxForSelectAssignmentSubject = new javax.swing.JComboBox<>();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel22 = new javax.swing.JLabel();
         jButton59 = new javax.swing.JButton();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         exercisePanel = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
@@ -173,7 +174,8 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jLabel26 = new javax.swing.JLabel();
         jButton61 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
+        jTextAreaForStudentGrade = new javax.swing.JTextArea();
+        jButton4 = new javax.swing.JButton();
         examsPanel = new javax.swing.JPanel();
         jTabbedPaneForExamsPanel = new javax.swing.JTabbedPane();
         examRulesPanel = new javax.swing.JPanel();
@@ -182,11 +184,11 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jLabel23 = new javax.swing.JLabel();
         jButton30 = new javax.swing.JButton();
         jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
         jButton33 = new javax.swing.JButton();
         jButton60 = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
-        jTextArea7 = new javax.swing.JTextArea();
+        jTextAreaForExamRules = new javax.swing.JTextArea();
+        jButton53 = new javax.swing.JButton();
         objectivePanel = new javax.swing.JPanel();
         jButton34 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
@@ -416,7 +418,7 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
                 gamesBtnActionPerformed(evt);
             }
         });
-        leftDashboardPanel.add(gamesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 120, 70));
+        leftDashboardPanel.add(gamesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 120, 70));
 
         subjectsBtn.setBackground(new java.awt.Color(0, 255, 204));
         subjectsBtn.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -686,16 +688,40 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
                 "Note Name", "Subject", "Location"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable1.setShowHorizontalLines(true);
         jScrollPane3.setViewportView(jTable1);
 
-        jPanel9.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 60, 310, 330));
+        jPanel9.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 310, 320));
 
         lectureNotePanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 530));
 
@@ -870,19 +896,20 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
 
         jLabel11.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel11.setText("Book Description");
-        eLibraryPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, -1, -1));
+        eLibraryPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, -1, -1));
 
-        jTextArea3.setEditable(false);
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane5.setViewportView(jTextArea3);
+        jTextAreaForLibraryBookDescription.setEditable(false);
+        jTextAreaForLibraryBookDescription.setColumns(20);
+        jTextAreaForLibraryBookDescription.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
+        jTextAreaForLibraryBookDescription.setRows(5);
+        jScrollPane5.setViewportView(jTextAreaForLibraryBookDescription);
 
         eLibraryPanel.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 80, 430, 400));
 
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel14.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        jLabel14.setText("e-LIBRARY");
-        eLibraryPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 110, 30));
+        jLabel14.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel14.setText("E-LIBRARY");
+        eLibraryPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 110, 30));
 
         jButton26.setBackground(new java.awt.Color(0, 255, 204));
         jButton26.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -991,11 +1018,16 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
 
         jLabel12.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel12.setText("Select Book");
-        eLibraryPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, -1));
+        eLibraryPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 110, -1));
 
         jButton3.setBackground(new java.awt.Color(0, 204, 153));
         jButton3.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jButton3.setText("Open");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         eLibraryPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
 
         jTabbedPaneForSubjectsPanel.addTab("tab5", eLibraryPanel);
@@ -1012,24 +1044,77 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), null));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel16.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel16.setText("My Time Table");
-        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 160, -1));
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 160, -1));
 
+        jButton58.setBackground(new java.awt.Color(255, 255, 153));
         jButton58.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton58.setText("Back To Home");
+        jButton58.setText("Home");
         jButton58.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton58ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 410, -1, -1));
+        jPanel5.add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 430, -1, -1));
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jScrollPane7.setViewportView(jTextArea5);
+        jTableForStudentTimeTable.setBackground(new java.awt.Color(255, 255, 153));
+        jTableForStudentTimeTable.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jTableForStudentTimeTable.setForeground(new java.awt.Color(0, 0, 0));
+        jTableForStudentTimeTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
 
-        jPanel5.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 630, 350));
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableForStudentTimeTable.setGridColor(new java.awt.Color(255, 153, 0));
+        jTableForStudentTimeTable.setRowHeight(80);
+        jTableForStudentTimeTable.setRowMargin(25);
+        jTableForStudentTimeTable.setShowHorizontalLines(true);
+        jTableForStudentTimeTable.setShowVerticalLines(true);
+        jScrollPane15.setViewportView(jTableForStudentTimeTable);
+
+        jPanel5.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 900, 360));
+
+        jButtonForViewTimeTable.setBackground(new java.awt.Color(255, 255, 153));
+        jButtonForViewTimeTable.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButtonForViewTimeTable.setText("View");
+        jButtonForViewTimeTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonForViewTimeTableActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButtonForViewTimeTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, -1, -1));
 
         timetablePanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
@@ -1047,27 +1132,19 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jPanel15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton27.setBackground(new java.awt.Color(255, 255, 153));
         jButton27.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton27.setText("Begin");
+        jButton27.setText("View");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton27ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 420, 110, 40));
+        jPanel15.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 60, 40));
 
         jLabel20.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel20.setText("Task:");
-        jPanel15.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, 40, -1));
-
-        jComboBoxForSelectAssignmentSubject.setBackground(new java.awt.Color(255, 255, 153));
-        jComboBoxForSelectAssignmentSubject.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select" }));
-        jComboBoxForSelectAssignmentSubject.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxForSelectAssignmentSubjectActionPerformed(evt);
-            }
-        });
-        jPanel15.add(jComboBoxForSelectAssignmentSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 120, 40));
+        jPanel15.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 40, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
@@ -1075,45 +1152,17 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jTextArea1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 255, 204), new java.awt.Color(0, 255, 204), new java.awt.Color(0, 255, 204), new java.awt.Color(0, 255, 204)));
         jScrollPane8.setViewportView(jTextArea1);
 
-        jPanel15.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 450, 340));
+        jPanel15.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 820, 350));
 
-        jLabel22.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
-        jLabel22.setText("Select Topic:");
-        jPanel15.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-
+        jButton59.setBackground(new java.awt.Color(255, 255, 153));
         jButton59.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton59.setText("Back To Home");
+        jButton59.setText("Home");
         jButton59.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton59ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
-
-        jTable2.setBackground(new java.awt.Color(255, 255, 204));
-        jTable2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 255, 204), new java.awt.Color(204, 255, 204), new java.awt.Color(204, 255, 204), new java.awt.Color(204, 255, 204)));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Topic", "Exercise", "Location"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane14.setViewportView(jTable2);
-
-        jPanel15.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 260, 290));
+        jPanel15.add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 430, -1, -1));
 
         selectExcercisePanel.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 520));
 
@@ -1211,20 +1260,31 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jLabel26.setText("Grades");
         jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, -1));
 
+        jButton61.setBackground(new java.awt.Color(255, 255, 153));
         jButton61.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton61.setText("Back To Home");
+        jButton61.setText("Home");
         jButton61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton61ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton61, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
+        jPanel2.add(jButton61, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, -1, -1));
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setRows(5);
-        jScrollPane9.setViewportView(jTextArea6);
+        jTextAreaForStudentGrade.setColumns(20);
+        jTextAreaForStudentGrade.setRows(5);
+        jScrollPane9.setViewportView(jTextAreaForStudentGrade);
 
         jPanel2.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 610, 300));
+
+        jButton4.setBackground(new java.awt.Color(255, 255, 153));
+        jButton4.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButton4.setText("View");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
 
         jTabbedPane4.addTab("tab1", jPanel2);
 
@@ -1243,65 +1303,68 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jLabel19.setText("Examination Rules");
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Georgia", 3, 12)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Georgia", 2, 12)); // NOI18N
         jLabel23.setText("Please Read and Adhere strictly to the following rules:");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
         jButton30.setBackground(new java.awt.Color(0, 255, 204));
         jButton30.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton30.setText("Exam Scores");
+        jButton30.setText("Scores");
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton30ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, -1, 30));
+        jPanel3.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 90, 30));
 
         jButton31.setBackground(new java.awt.Color(0, 255, 204));
         jButton31.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton31.setText("Start Objective");
+        jButton31.setText("Objective");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton31ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, -1, -1));
-
-        jButton32.setBackground(new java.awt.Color(0, 255, 204));
-        jButton32.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton32.setText("Practice Questions");
-        jButton32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton32ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, -1, 30));
+        jPanel3.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, -1, 30));
 
         jButton33.setBackground(new java.awt.Color(0, 255, 204));
         jButton33.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton33.setText("Start Theory");
+        jButton33.setText("Theory");
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton33ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, 30));
+        jPanel3.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 90, 30));
 
         jButton60.setBackground(new java.awt.Color(0, 255, 204));
         jButton60.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton60.setText("Back To Home");
+        jButton60.setText("Home");
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton60ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+        jPanel3.add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 90, 30));
 
-        jTextArea7.setColumns(20);
-        jTextArea7.setRows(5);
-        jScrollPane10.setViewportView(jTextArea7);
+        jTextAreaForExamRules.setEditable(false);
+        jTextAreaForExamRules.setColumns(20);
+        jTextAreaForExamRules.setFont(new java.awt.Font("Georgia", 3, 14)); // NOI18N
+        jTextAreaForExamRules.setRows(5);
+        jTextAreaForExamRules.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 255, 204), new java.awt.Color(0, 204, 204)));
+        jScrollPane10.setViewportView(jTextAreaForExamRules);
 
-        jPanel3.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 890, 280));
+        jPanel3.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 640, 280));
+
+        jButton53.setBackground(new java.awt.Color(0, 255, 204));
+        jButton53.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        jButton53.setText("Practice");
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton53ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 280, 90, 30));
 
         examRulesPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 510));
 
@@ -1313,21 +1376,41 @@ myBooks.addSubjectsToLibraryComboBox(jComboBoxForLibrarySubject);
         jButton34.setBackground(new java.awt.Color(0, 153, 153));
         jButton34.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jButton34.setText("Start Theory");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
         objectivePanel.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, -1, 30));
 
         jButton35.setBackground(new java.awt.Color(0, 153, 153));
         jButton35.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jButton35.setText("Exam Rules");
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
         objectivePanel.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, 30));
 
         jButton36.setBackground(new java.awt.Color(0, 153, 153));
         jButton36.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jButton36.setText("Exam Scores");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
         objectivePanel.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, -1, 30));
 
         jButton37.setBackground(new java.awt.Color(0, 153, 153));
         jButton37.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jButton37.setText("Practice Questions");
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
         objectivePanel.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, -1, 30));
 
         jButton49.setBackground(new java.awt.Color(0, 153, 153));
@@ -1602,8 +1685,8 @@ labelForSubPanel.setText("Assignments");
 
         //this button calls the panel for grades
 jTabbedPaneForHomeAndDashboard.setSelectedIndex(1);
-        jTabbedPaneForMainDashboard.setSelectedIndex(4);
-
+        jTabbedPaneForMainDashboard.setSelectedIndex(3);
+labelForSubPanel.setText("Grades");
 
         // TODO add your handling code here:
     }//GEN-LAST:event_myGradesHomeActionPerformed
@@ -1623,8 +1706,8 @@ labelForSubPanel.setText("Games");
 
         //this button calls the panel for exams
 jTabbedPaneForHomeAndDashboard.setSelectedIndex(1);
-        jTabbedPaneForMainDashboard.setSelectedIndex(3);
-labelForSubPanel.setText("Emams");
+        jTabbedPaneForMainDashboard.setSelectedIndex(4);
+labelForSubPanel.setText("Exams");
 
 
         // TODO add your handling code here:
@@ -1642,8 +1725,9 @@ labelForSubPanel.setText("Assignments");
     private void examsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_examsBtnActionPerformed
 
         //this button calls the panel for exams
-        jTabbedPaneForMainDashboard.setSelectedIndex(3);
-labelForSubPanel.setText("Exams");
+        jTabbedPaneForMainDashboard.setSelectedIndex(4);
+        jTabbedPaneForExamsPanel.setSelectedIndex(0);
+        labelForSubPanel.setText("Exams");
 
         // TODO add your handling code here:
     }//GEN-LAST:event_examsBtnActionPerformed
@@ -1651,7 +1735,7 @@ labelForSubPanel.setText("Exams");
     private void gradesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gradesBtnActionPerformed
 
         //this button calls the panel for grades
-        jTabbedPaneForMainDashboard.setSelectedIndex(4);
+        jTabbedPaneForMainDashboard.setSelectedIndex(3);
 labelForSubPanel.setText("Grades");
 
         // TODO add your handling code here:
@@ -1777,14 +1861,6 @@ try{
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton31ActionPerformed
-
-    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
-
-        //this button calls the exam panel for practice questions
-        jTabbedPaneForExamsPanel.setSelectedIndex(4);
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
 
@@ -2053,8 +2129,8 @@ myNotes.addTopicsToTable(jTableForSelectTopic, jComboBoxForSelectSubject, jTextA
     }//GEN-LAST:event_jComboBoxForSelectSubjectActionPerformed
 
     private void jTableForLibraryBookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableForLibraryBookMouseClicked
-ReadBook myLibraryBooks = new ReadBook();
-myLibraryBooks.openLibraryBook(jTableForLibraryBook);
+        StudentLibrary myBooks = new StudentLibrary();
+        myBooks.displayWhenClicked(jTextAreaForLibraryBookDescription, jTableForLibraryBook);
     }//GEN-LAST:event_jTableForLibraryBookMouseClicked
 
     private void jComboBoxForLibrarySubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxForLibrarySubjectActionPerformed
@@ -2078,18 +2154,61 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxForVideoSubjectActionPerformed
 
-    private void jComboBoxForSelectAssignmentSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxForSelectAssignmentSubjectActionPerformed
-
-        Assignment myHomeWork = new Assignment();
-        myHomeWork.addAssignmentSubjectsToComboBox(jComboBoxForSelectAssignmentSubject);
-        
-        
-    }//GEN-LAST:event_jComboBoxForSelectAssignmentSubjectActionPerformed
-
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
       jTabbedPaneForSubjectsPanel.setSelectedIndex(0);
 
     }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        try{
+        ReadBook myLibraryBooks = new ReadBook();
+        myLibraryBooks.openLibraryBook(jTableForLibraryBook);
+        } catch(ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null, "You have not selected any Book."
+                    + " Please choose the Book you want to Open!!!");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+
+jTabbedPaneForExamsPanel.setSelectedIndex(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+jTabbedPaneForExamsPanel.setSelectedIndex(2);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+jTabbedPaneForExamsPanel.setSelectedIndex(3);
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        jTabbedPaneForExamsPanel.setSelectedIndex(4);
+
+    }//GEN-LAST:event_jButton37ActionPerformed
+
+    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton53ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButtonForViewTimeTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonForViewTimeTableActionPerformed
+TimeTableForStudents timeTable = new TimeTableForStudents();
+timeTable.addTimeTableToJTable(jTableForStudentTimeTable);
+
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonForViewTimeTableActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2158,7 +2277,6 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
@@ -2166,6 +2284,7 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
@@ -2180,6 +2299,7 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JButton jButton50;
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;
+    private javax.swing.JButton jButton53;
     private javax.swing.JButton jButton54;
     private javax.swing.JButton jButton55;
     private javax.swing.JButton jButton56;
@@ -2193,10 +2313,10 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JButton jButton64;
     private javax.swing.JButton jButton65;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButtonForViewTimeTable;
     private javax.swing.JButton jButtonToPlayVideo;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBoxForLibrarySubject;
-    private javax.swing.JComboBox<String> jComboBoxForSelectAssignmentSubject;
     private javax.swing.JComboBox<String> jComboBoxForSelectSubject;
     private javax.swing.JComboBox<String> jComboBoxForVideoSubject;
     private javax.swing.JLabel jLabel1;
@@ -2210,7 +2330,6 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2246,13 +2365,12 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -2265,17 +2383,16 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
     private javax.swing.JTabbedPane jTabbedPaneForMainDashboard;
     private javax.swing.JTabbedPane jTabbedPaneForSubjectsPanel;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTableForLibraryBook;
     private javax.swing.JTable jTableForSelectTopic;
+    private javax.swing.JTable jTableForStudentTimeTable;
     private javax.swing.JTable jTableForStudentVideo;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JTextArea jTextAreaForExamRules;
+    private javax.swing.JTextArea jTextAreaForLibraryBookDescription;
+    private javax.swing.JTextArea jTextAreaForStudentGrade;
     private javax.swing.JTextArea jTextAreaForTopicDescription;
     private javax.swing.JTextArea jTextAreaForVideoDescription;
     private javax.swing.JTextField jTextField1;

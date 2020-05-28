@@ -40,7 +40,7 @@ catch(Exception e){
 public void openLibraryBook(JTable jTableForLibraryBook){
     
     int row = jTableForLibraryBook.getSelectedRow();
-            String value =(jTableForLibraryBook.getModel().getValueAt(row, 2).toString());
+            String value =(jTableForLibraryBook.getModel().getValueAt(row, 3).toString());
 if (Desktop.isDesktopSupported()){
 try{
       File myFile = new File(value);
