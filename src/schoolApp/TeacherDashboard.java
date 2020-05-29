@@ -394,6 +394,8 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
         labelForSubTopPanel.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         labelForSubTopPanel.setForeground(new java.awt.Color(255, 255, 255));
         subTopDashboard.add(labelForSubTopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 6, 160, 30));
+
+        jLabelForPanels.setFont(new java.awt.Font("Georgia", 2, 12)); // NOI18N
         subTopDashboard.add(jLabelForPanels, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 120, 30));
 
         MainDashboardPanel.add(subTopDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 1010, 50));
@@ -548,7 +550,7 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
         jScrollPane11.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
 
         jTableForLectureNotes.setBackground(new java.awt.Color(204, 255, 204));
-        jTableForLectureNotes.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTableForLectureNotes.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 255, 102), new java.awt.Color(0, 255, 0)));
         jTableForLectureNotes.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jTableForLectureNotes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -586,7 +588,9 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 return canEdit [columnIndex];
             }
         });
-        jTableForLectureNotes.setGridColor(new java.awt.Color(153, 153, 153));
+        jTableForLectureNotes.setGridColor(new java.awt.Color(51, 255, 102));
+        jTableForLectureNotes.setRowHeight(25);
+        jTableForLectureNotes.setRowMargin(10);
         jTableForLectureNotes.setShowVerticalLines(true);
         jTableForLectureNotes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -814,7 +818,9 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 return canEdit [columnIndex];
             }
         });
-        jTableForLectureVideos.setGridColor(new java.awt.Color(153, 153, 153));
+        jTableForLectureVideos.setGridColor(new java.awt.Color(0, 255, 51));
+        jTableForLectureVideos.setOpaque(false);
+        jTableForLectureVideos.setRowHeight(25);
         jTableForLectureVideos.setShowVerticalLines(true);
         jTableForLectureVideos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1053,7 +1059,9 @@ myLectureVideos.insertVideosIntoJTable(jTableForLectureVideos);
                 return canEdit [columnIndex];
             }
         });
-        jTableForLibrary.setGridColor(new java.awt.Color(153, 153, 153));
+        jTableForLibrary.setGridColor(new java.awt.Color(0, 255, 102));
+        jTableForLibrary.setRowHeight(25);
+        jTableForLibrary.setRowMargin(15);
         jTableForLibrary.setShowVerticalLines(true);
         jTableForLibrary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

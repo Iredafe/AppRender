@@ -153,7 +153,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         jButton27 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextAreaForAssignment = new javax.swing.JTextArea();
         jButton59 = new javax.swing.JButton();
         exercisePanel = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -523,7 +523,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         });
         selectSubjectPanel.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 350, 80, 50));
 
-        jLabel6.setFont(new java.awt.Font("Georgia", 3, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Georgia", 2, 14)); // NOI18N
         jLabel6.setText("Select a Subject and choose a Topic that you would like to read, then Click the Read button below.");
         selectSubjectPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
@@ -632,7 +632,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         });
         jPanel9.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel8.setText("Take Notes");
         jPanel9.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
 
@@ -750,7 +750,6 @@ myExam.addExamRules(jTextAreaForExamRules);
         jButtonToPlayVideo.setBackground(new java.awt.Color(0, 255, 204));
         jButtonToPlayVideo.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         jButtonToPlayVideo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/schoolApp/schoolicons/play-button.png"))); // NOI18N
-        jButtonToPlayVideo.setText("Play");
         jButtonToPlayVideo.setToolTipText("Home");
         jButtonToPlayVideo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonToPlayVideo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -759,7 +758,7 @@ myExam.addExamRules(jTextAreaForExamRules);
                 jButtonToPlayVideoActionPerformed(evt);
             }
         });
-        jPanel10.add(jButtonToPlayVideo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 70, 60));
+        jPanel10.add(jButtonToPlayVideo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 400, 60, 40));
 
         jButton29.setBackground(new java.awt.Color(0, 255, 204));
         jButton29.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -882,7 +881,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         });
         jPanel10.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 70, -1));
 
-        jLabel33.setFont(new java.awt.Font("Georgia", 3, 14)); // NOI18N
+        jLabel33.setFont(new java.awt.Font("Georgia", 2, 14)); // NOI18N
         jLabel33.setText("Select a Subject and choose a Video that you would like to watch, then Click the Play button below.");
         jPanel10.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
@@ -907,8 +906,8 @@ myExam.addExamRules(jTextAreaForExamRules);
         eLibraryPanel.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 80, 430, 400));
 
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel14.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel14.setText("E-LIBRARY");
+        jLabel14.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
+        jLabel14.setText("E-library");
         eLibraryPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 110, 30));
 
         jButton26.setBackground(new java.awt.Color(0, 255, 204));
@@ -1146,11 +1145,12 @@ myExam.addExamRules(jTextAreaForExamRules);
         jLabel20.setText("Task:");
         jPanel15.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 40, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 255, 204), new java.awt.Color(0, 255, 204), new java.awt.Color(0, 255, 204), new java.awt.Color(0, 255, 204)));
-        jScrollPane8.setViewportView(jTextArea1);
+        jTextAreaForAssignment.setEditable(false);
+        jTextAreaForAssignment.setColumns(20);
+        jTextAreaForAssignment.setFont(new java.awt.Font("Georgia", 1, 13)); // NOI18N
+        jTextAreaForAssignment.setRows(5);
+        jTextAreaForAssignment.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 204, 0), new java.awt.Color(255, 153, 0), new java.awt.Color(255, 153, 0)));
+        jScrollPane8.setViewportView(jTextAreaForAssignment);
 
         jPanel15.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 820, 350));
 
@@ -1256,7 +1256,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel26.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel26.setText("Grades");
         jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, -1));
 
@@ -1271,7 +1271,9 @@ myExam.addExamRules(jTextAreaForExamRules);
         jPanel2.add(jButton61, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, -1, -1));
 
         jTextAreaForStudentGrade.setColumns(20);
+        jTextAreaForStudentGrade.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jTextAreaForStudentGrade.setRows(5);
+        jTextAreaForStudentGrade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 204, 0), 2, true));
         jScrollPane9.setViewportView(jTextAreaForStudentGrade);
 
         jPanel2.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 610, 300));
@@ -1299,7 +1301,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         jPanel3.setBackground(new java.awt.Color(153, 255, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel19.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel19.setText("Examination Rules");
         jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
 
@@ -1423,7 +1425,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         });
         objectivePanel.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, 30));
 
-        jLabel28.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel28.setText("Objective");
         objectivePanel.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, -1, -1));
 
@@ -1482,7 +1484,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         });
         theoryPanel.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, 30));
 
-        jLabel27.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel27.setText("Theory");
         theoryPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
@@ -1541,7 +1543,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         });
         examScoresPanel.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, 30));
 
-        jLabel29.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel29.setText("Exam Scores");
         examScoresPanel.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, -1, -1));
 
@@ -1611,7 +1613,7 @@ myExam.addExamRules(jTextAreaForExamRules);
         jPanel6.setBackground(new java.awt.Color(255, 255, 153));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel24.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel24.setText("Upgrade to Premium Version");
         jPanel6.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 380, 60));
 
@@ -1802,9 +1804,12 @@ jTabbedPaneForHomeAndDashboard.setSelectedIndex(0);
 
     private void jButtonToPlayVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonToPlayVideoActionPerformed
 try{
-        OpenVideoFile myVideo = new OpenVideoFile();
+     
+    OpenVideoFile myVideo = new OpenVideoFile();
         myVideo.playVideo(jTableForStudentVideo);
-        this.setState(Frame.NORMAL);
+      JOptionPane.showMessageDialog(null, "Opening Video...");
+              this.setState(Frame.NORMAL);
+        
 }catch(ArrayIndexOutOfBoundsException ex){
     JOptionPane.showMessageDialog(null, "No Video has been selected to play. Please select a Video!!!");
 }    
@@ -1830,9 +1835,9 @@ try{
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-        // TODO add your handling code here:
-
-        jTabbedPaneForAssignments.setSelectedIndex(1);
+  Assignment myAssignment = new Assignment();
+  myAssignment.addAssignment(jTextAreaForAssignment);
+        
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
@@ -2106,6 +2111,8 @@ jTabbedPaneForSubjectsPanel.setSelectedIndex(1);        // TODO add your handlin
 try{
 ReadBook myBook = new ReadBook();
 myBook.openNote(jTableForSelectTopic);
+JOptionPane.showMessageDialog(null, "Opening Book...");
+this.setState(Frame.NORMAL);
 }
 catch(ArrayIndexOutOfBoundsException aiob){
         JOptionPane.showMessageDialog(null, "No book was selected. Please select one.");   
@@ -2164,9 +2171,11 @@ myVideoTable.addVideosToTable(jComboBoxForVideoSubject, jTableForStudentVideo);
         try{
         ReadBook myLibraryBooks = new ReadBook();
         myLibraryBooks.openLibraryBook(jTableForLibraryBook);
+JOptionPane.showMessageDialog(null, "Opening Book...");
+this.setState(Frame.NORMAL);
+
         } catch(ArrayIndexOutOfBoundsException e){
-            JOptionPane.showMessageDialog(null, "You have not selected any Book."
-                    + " Please choose the Book you want to Open!!!");
+            JOptionPane.showMessageDialog(null, "Please choose the Book you want to Open!!!");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -2196,7 +2205,8 @@ jTabbedPaneForExamsPanel.setSelectedIndex(3);
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
+StudentGrade myGrade = new StudentGrade();
+myGrade.addGradeFile(jTextAreaForStudentGrade);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -2387,9 +2397,9 @@ timeTable.addTimeTableToJTable(jTableForStudentTimeTable);
     private javax.swing.JTable jTableForSelectTopic;
     private javax.swing.JTable jTableForStudentTimeTable;
     private javax.swing.JTable jTableForStudentVideo;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextAreaForAssignment;
     private javax.swing.JTextArea jTextAreaForExamRules;
     private javax.swing.JTextArea jTextAreaForLibraryBookDescription;
     private javax.swing.JTextArea jTextAreaForStudentGrade;

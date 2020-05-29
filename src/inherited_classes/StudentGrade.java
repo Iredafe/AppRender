@@ -5,6 +5,8 @@
  */
 package inherited_classes;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
@@ -17,6 +19,27 @@ import schoolApp.SqlConnection;
  */
 public class StudentGrade {
  
+     public void addGradeFile (JTextArea jTextAreaForStudentGrade){
+    
+    try{
+FileReader reader = new FileReader("C:\\Users\\Iredafe\\Desktop\\Programming books\\Grade.txt");  
+BufferedReader br = new BufferedReader (reader);
+jTextAreaForStudentGrade.read(br, null);
+br.close();
+//jTextArea1.requestFocus();    
+    
+} catch(Exception e){
+    
+    JOptionPane.showMessageDialog(null, e);
+    
+}
+
+    
+}   
+    
+    
+    
+    /*
      PreparedStatement pst;
     ResultSet rs;
     
@@ -68,4 +91,7 @@ jTextAreaForStudentGrade.append("    \n Your Grades  \n\n"
     }catch(Exception e){
         JOptionPane.showMessageDialog(null, e.getMessage());
     }
-    }}
+    }  */
+    
+
+}

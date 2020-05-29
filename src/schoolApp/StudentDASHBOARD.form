@@ -759,7 +759,7 @@
                             <Component class="javax.swing.JLabel" name="jLabel6">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="14" style="3"/>
+                                  <Font name="Georgia" size="14" style="2"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Select a Subject and choose a Topic that you would like to read, then Click the Read button below."/>
                               </Properties>
@@ -1027,7 +1027,7 @@
                                 <Component class="javax.swing.JLabel" name="jLabel8">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="18" style="0"/>
+                                      <Font name="Georgia" size="18" style="2"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Take Notes"/>
                                   </Properties>
@@ -1259,7 +1259,6 @@
                                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                       <Image iconType="3" name="/schoolApp/schoolicons/play-button.png"/>
                                     </Property>
-                                    <Property name="text" type="java.lang.String" value="Play"/>
                                     <Property name="toolTipText" type="java.lang.String" value="Home"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                     <Property name="verticalTextPosition" type="int" value="3"/>
@@ -1269,7 +1268,7 @@
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="210" y="390" width="70" height="60"/>
+                                      <AbsoluteConstraints x="220" y="400" width="60" height="40"/>
                                     </Constraint>
                                   </Constraints>
                                 </Component>
@@ -1531,7 +1530,7 @@
                                 <Component class="javax.swing.JLabel" name="jLabel33">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="14" style="3"/>
+                                      <Font name="Georgia" size="14" style="2"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Select a Subject and choose a Video that you would like to watch, then Click the Play button below."/>
                                   </Properties>
@@ -1611,9 +1610,9 @@
                                   <Color blue="0" green="0" red="0" type="rgb"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="0"/>
+                                  <Font name="Georgia" size="18" style="2"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="E-LIBRARY"/>
+                                <Property name="text" type="java.lang.String" value="E-library"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -2168,20 +2167,21 @@
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTextArea" name="jTextArea1">
+                                    <Component class="javax.swing.JTextArea" name="jTextAreaForAssignment">
                                       <Properties>
+                                        <Property name="editable" type="boolean" value="false"/>
                                         <Property name="columns" type="int" value="20"/>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Georgia" size="12" style="0"/>
+                                          <Font name="Georgia" size="13" style="1"/>
                                         </Property>
                                         <Property name="rows" type="int" value="5"/>
                                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                                             <BevelBorder>
-                                              <Color PropertyName="highlightOuter" blue="cc" green="ff" red="0" type="rgb"/>
-                                              <Color PropertyName="highlightInner" blue="cc" green="ff" red="0" type="rgb"/>
-                                              <Color PropertyName="shadowOuter" blue="cc" green="ff" red="0" type="rgb"/>
-                                              <Color PropertyName="shadowInner" blue="cc" green="ff" red="0" type="rgb"/>
+                                              <Color PropertyName="highlightOuter" blue="0" green="cc" red="ff" type="rgb"/>
+                                              <Color PropertyName="highlightInner" blue="0" green="cc" red="ff" type="rgb"/>
+                                              <Color PropertyName="shadowOuter" blue="0" green="99" red="ff" type="rgb"/>
+                                              <Color PropertyName="shadowInner" blue="0" green="99" red="ff" type="rgb"/>
                                             </BevelBorder>
                                           </Border>
                                         </Property>
@@ -2485,7 +2485,7 @@
                             <Component class="javax.swing.JLabel" name="jLabel26">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="1"/>
+                                  <Font name="Georgia" size="18" style="2"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Grades"/>
                               </Properties>
@@ -2529,7 +2529,17 @@
                                 <Component class="javax.swing.JTextArea" name="jTextAreaForStudentGrade">
                                   <Properties>
                                     <Property name="columns" type="int" value="20"/>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Georgia" size="14" style="1"/>
+                                    </Property>
                                     <Property name="rows" type="int" value="5"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder roundedCorners="true" thickness="2">
+                                          <Color PropertyName="color" blue="0" green="cc" red="ff" type="rgb"/>
+                                        </LineBorder>
+                                      </Border>
+                                    </Property>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -2613,7 +2623,7 @@
                                 <Component class="javax.swing.JLabel" name="jLabel19">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Georgia" size="18" style="1"/>
+                                      <Font name="Georgia" size="18" style="2"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Examination Rules"/>
                                   </Properties>
@@ -2883,7 +2893,7 @@
                             <Component class="javax.swing.JLabel" name="jLabel28">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="1"/>
+                                  <Font name="Georgia" size="18" style="2"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Objective"/>
                               </Properties>
@@ -3011,7 +3021,7 @@
                             <Component class="javax.swing.JLabel" name="jLabel27">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="1"/>
+                                  <Font name="Georgia" size="18" style="2"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Theory"/>
                               </Properties>
@@ -3139,7 +3149,7 @@
                             <Component class="javax.swing.JLabel" name="jLabel29">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="1"/>
+                                  <Font name="Georgia" size="18" style="2"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Exam Scores"/>
                               </Properties>
@@ -3313,7 +3323,7 @@
                             <Component class="javax.swing.JLabel" name="jLabel24">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Georgia" size="18" style="1"/>
+                                  <Font name="Georgia" size="18" style="2"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Upgrade to Premium Version"/>
                               </Properties>

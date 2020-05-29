@@ -21,7 +21,7 @@ public void playVideo(JTable jTableForStudentVideo){
     
             int row = jTableForStudentVideo.getSelectedRow();
 
-String value = (jTableForStudentVideo.getModel().getValueAt(row, 1).toString());
+String value = (jTableForStudentVideo.getModel().getValueAt(row, 2).toString());
     
 if (Desktop.isDesktopSupported()){
 try{

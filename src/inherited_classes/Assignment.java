@@ -5,11 +5,14 @@
  */
 package inherited_classes;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import schoolApp.SqlConnection;
 
 /**
@@ -18,7 +21,41 @@ import schoolApp.SqlConnection;
  */
 public class Assignment {
  
+
     
+        public void addAssignment (JTextArea jTextAreaForAssignment){
+    
+    try{
+FileReader reader = new FileReader("C:\\Users\\Iredafe\\Desktop\\Programming books\\English Assignment.txt");  
+BufferedReader br = new BufferedReader (reader);
+jTextAreaForAssignment.read(br, null);
+br.close();
+//jTextArea1.requestFocus();    
+    
+} catch(Exception e){
+    
+    JOptionPane.showMessageDialog(null, e);
+    
+}
+
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*    
 PreparedStatement pst;
 ResultSet rs;
 
@@ -49,5 +86,8 @@ String subjectComboBox = rs.getString("subject name");
         } 
 }
 
-    
+
+*/
+
+
 }
